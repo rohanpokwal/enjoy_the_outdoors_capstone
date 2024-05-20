@@ -28,7 +28,7 @@ Ultimately, the user would like to have two ways to search for a national park:
 
 **Search by Park Type** - This option allows users to select a description from a [dropdown](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select).  
 
-**You will know a park matches the description by checking to see if the park's "LocationName" property ***includes*** the description**. 
+**You will know a park matches the description by checking to see if the park's `LocationName` property ***includes*** the description**. 
 
 One of the challenges will be how the user is presented with two search options populated with the appropriate values. Do you use [radio buttons](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio) to select the search type?  Do you use a [dropdown](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select) with the search types as [options](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option)?
 
