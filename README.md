@@ -1,6 +1,20 @@
 # Capstone Project: Enjoy the Outdoors
 In this project, you will build an application that helps a user find things to do to enjoy the great outdoors. Our app specializes in finding national parks to enjoy and mountains to climb. You will use what you know about React to complete this project. You will also need to flex your research skills to solve any blockers you run into.
 
+**Live Demo**  
+- https://enjoy-the-outdoors.netlify.app/
+
+**Relevent Class Resources:**  
+- [Tourist Bureau with tables](https://github.com/erics273/tourist_bureau_workshop_with_tables)
+- [Instructor Demos](https://github.com/erics273/wb5_exercises/tree/main/eric_demos)
+
+**Relevent Bootstrap Links:**
+ - [Select Boxes (Drowdowns)](https://getbootstrap.com/docs/5.3/forms/select/)
+ - [Radio Buttons](https://getbootstrap.com/docs/5.3/forms/checks-radios/#radios)
+ - [Tables](https://getbootstrap.com/docs/5.3/content/tables/)
+ - [Cards](https://getbootstrap.com/docs/5.3/components/card/#kitchen-sink)
+ - [Navbar](https://getbootstrap.com/docs/5.3/components/navbar/)
+
 ## Basic Requirements
 The website should include the following in order to be considered complete:
 
