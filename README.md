@@ -72,4 +72,20 @@ Challenge yourself with some of the stretch goals below. **These stretch goals s
   });
   ```
 
-> NOTE(S): the lat and lng values are included in the mountain data. The times returned are in UTC are not adjusted for local summer variations. Label the output as UTC time when you display them or try to convert them to local time for the user. 
+> NOTE(S): the lat and lng values are included in the mountain data. The times returned are in UTC are not adjusted for local summer variations. Label the output as UTC time when you display them or try to convert them to local time for the user.
+
+## What Makes A Good Capstone Project?
+
+**You Should:**  
+- Build a consistent look-and-feel throughout the site with a working navigation
+- Implement at least the required pages 
+- Have a responsive user interface 
+- Build a public repo for your code, use an appropriate branching strategy, and have a commit history with meaningful commit messages
+
+**Implement best practices:**  
+- Have a good directory structures (ex: css, images and scripts folders) 
+- Use good file naming conventions (ex: lowercase file names with no spaces)
+- Have well-formatted HTML, CSS and JavaScript (indentions, blank lines, etc)
+- Use good names for your HTML elements and JavaScript variables/functions
+- Use HTML, CSS and JavaScript comments effectively
+- Make sure there are no JavaScript errors at run time (check the Console tab in the browser frequently)
