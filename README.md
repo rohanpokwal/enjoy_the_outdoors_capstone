@@ -22,7 +22,7 @@ Ultimately, the user would like to have two ways to search for a national park:
 
 **Search by Location** - This option allows users to select the state/territory from a [dropdown](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select).  
 
-**You will know a park matches the location by comparing it to the park's State" property**. 
+**You will know a park matches the location by comparing it to the park's `State` property**. 
 
 > **NOTE:** Search by Location is the most important search option and should be the completed first.
 
