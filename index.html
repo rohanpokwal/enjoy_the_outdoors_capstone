@@ -1,35 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enjoy The Outdoors</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-<body>
 
-    <header class="mb-3">
-        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Enjoy The Outdoors</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                  <a class="nav-link" href="national_parks.html">National Parks</a>
-                  <a class="nav-link" href="mountains.html">Mountains</a>
-                </div>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav
+      class="navbar navbar-expand-lg bg-success navi-box fixed-top"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"
+          ><img class="img-logo" src="otherImages/logo.png" alt="logo"
+        /></a>
+        <a class="navbar-brand navHeading" href="index.html"
+          >Wilderness Locator</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse px-5 navi-link-box"
+          id="navbarNavDropdown"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="national_parks.html">National Parks</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mountains.html">Mountains</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Implementing Carosals -->
+    <div id="carouselExampleCaptions" class="carousel slide mt-5">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="otherImages/arches-national-park-caro-1.avif"
+            class="d-block w-100 caro-img"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="fw-bold">ARCHES NATIONAL PARK</h5>
+            <p>Grand County, Utah</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="otherImages/big-bend-national-park-caro-2.avif"
+            class="d-block w-100 caro-img"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="fw-bold">BIG BEND NATIONAL PARK</h5>
+            <p>Big Bend National Park, Texas</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="otherImages/denali-mountain-caro-3.webp"
+            class="d-block w-100 caro-img"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="fw-bold">DENALI MOUNTAIN</h5>
+            <p>Alaska, US</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="otherImages/chiso-mountain-caro-4.webp"
+            class="d-block w-100 caro-img"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="fw-bold">CHISOS MOUNTAIN</h5>
+            <p>Trans-Pecos, Texas</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="container">
+      <h3 class="text-center mt-2 mission-h3">Our Mission</h3>
+      <p class="text-center">"Discover. Explore. Preserve"</p>
+      <p class="mb-3">
+        At Wilderness Locator, we are dedicated to connecting people with the
+        natural beauty of the United States by providing an easy-to-use platform
+        for locating national parks and mountains. Our mission is to inspire
+        outdoor exploration and conservation, fostering a deep appreciation for
+        our country's natural heritage. We also strive to raise funds and
+        awareness to support the creation of new parks, ensuring future
+        generations have the opportunity to enjoy and protect these treasured
+        landscapes.
+      </p>
+    </div>
+    <!-- Donation Section -->
+    <div class="container mb-5">
+      <div class="row">
+        <!-- column 1 -->
+        <div
+          class="col border border-success rounded-2 bg-secondary text-light"
+        >
+          <div
+            class="d-flex flex-column justify-content-center align-items-center text-center"
+          >
+            <p class="pt-3 fw-bold">
+              --Donate to your Favorite National Park--
+            </p>
+            <select
+              id="donationDropDown"
+              class="form-select form-select-sm w-50"
+              aria-label="Small select example"
+            ></select>
+          </div>
+
+          <!-- Form for Donation -->
+          <form class="row g-3">
+            <div class="col-md-6">
+              <label for="fsName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="fsName" />
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="inputPassword4" />
+            </div>
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Address</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputAddress"
+                placeholder="1234 Main St"
+              />
+            </div>
+            <div class="col-12">
+              <label for="crdNum" class="form-label">Card Number</label>
+              <input
+                type="number"
+                class="form-control"
+                id="crdNum"
+                placeholder="Apartment, studio, or floor"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="donationAmt" class="form-label"
+                >Donation Amount</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="donationAmt"
+                placeholder="in $"
+                required
+              />
+            </div>
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">State</label>
+              <select id="inputState" class="form-select">
+                <option selected>Choose...</option>
+                <option>TX</option>
+                <option>NY</option>
+                <option>NM</option>
+                <option>NV</option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <label for="inputZip" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="inputZip" />
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="gridCheck"
+                />
+                <label class="form-check-label" for="gridCheck">
+                  Confirm the Details
+                </label>
               </div>
             </div>
-          </nav>
-    </header>
+            <div class="col-12">
+              <button
+                id="paymentBtn"
+                type="submit"
+                class="btn btn-primary mb-3 mt-3"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+          <!-- this is where I will display Result -->
+          <div id="result" class="pmtResult text-info"></div>
+        </div>
 
-    <h1>Welcome!</h1>
+        <!-- column 2 -->
+        <div class="col">
+          <img class="park-map" src="otherImages/national-parks.jpeg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Card for displaying Videos -->
+    <div class="container card-container">
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card">
+            <div class="embed-responsive embed-responsive-16by11">
+              <iframe
+                class="embed-responsive-item"
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/AEdwplrrUF0?si=yyM6HuUts9Am3thI"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">America's National Park</h5>
+              <p class="card-text">
+                America’s National Parks" premieres August 29 at 9/8c on
+                National Geographic over five consecutive nights.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="embed-responsive embed-responsive-16by11">
+              <iframe
+                class="embed-responsive-item"
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/-NoEDnuu_c0?si=sySqYSxAUQn3SAuW"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Highest Mountains in the United States</h5>
+              <p class="card-text">
+                When it comes to mountains, no other state contains as many of
+                the highest peaks as Alaska.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="footer fixed-bottom mt-5 d-flex flex-column align-items-center justify-content-center"
+    >
+      <a href="national_parks.html"
+        ><button class="btn btn-primary mb-3" type="button">
+          Search For National Parks
+        </button></a
+      >
+      <a href="mountains.html"
+        ><button class="btn btn-primary" type="button">
+          Mountains Information
+        </button></a
+      >
+    </div>
 
     <!-- Bootstrap JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="scripts/data/nationalParkData.js"></script>
+    <script src="scripts/index.js"></script>
+  </body>
 </html>

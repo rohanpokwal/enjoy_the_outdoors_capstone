@@ -1,48 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enjoy The Outdoors - Mountains</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enjoy The Outdoors - Mountains</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-
-<body>
-
-  <header class="mb-3">
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Enjoy The Outdoors</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link" aria-current="page" href="index.html">Home</a>
-            <a class="nav-link" href="national_parks.html">National Parks</a>
-            <a class="nav-link active" href="mountains.html">Mountains</a>
+  <body>
+    <!-- Navigation Bar -->
+    <header class="headerNavigation fixed-top">
+      <nav
+        class="navbar navbar-expand-lg bg-success navi-box"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"
+            ><img class="img-logo" src="otherImages/logo.png" alt="logo"
+          /></a>
+          <a class="navbar-brand navHeading" href="index.html"
+            >Wilderness Locator</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse px-5 navi-link-box"
+            id="navbarNavDropdown"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="national_parks.html"
+                  >National Parks</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="mountains.html">Mountains</a>
+              </li>
+            </ul>
           </div>
         </div>
+      </nav>
+    </header>
+
+    <h3 class="mountainHeading text-center mb-2">
+      Select a Mountains to view details
+    </h3>
+
+    <!-- Select dropdown for mountains -->
+    <div class="d-flex justify-content-center">
+      <select
+        class="form-select w-25"
+        name="mountainSearch"
+        id="mountainSearch"
+      ></select>
+    </div>
+
+    <!-- card for displaying Result -->
+    <div class="d-flex justify-content-center mt-5 mb-5">
+      <div id="mountainCard" class="card" style="width: 30rem">
+        <img id="mountainImg" class="card-img-top" alt="ALT TEXT HERE" />
+        <div class="card-body bg-success-subtle text-body">
+          <h5 id="mountainHeading" class="card-title"></h5>
+          <p id="mountainDetails" class="card-text"></p>
+        </div>
+        <div class="card-body bg-info">
+          <p name="mountainLatitude" id="mountainLatitude"></p>
+          <p name="mountainLongitude" id="mountainLongitude"></p>
+        </div>
+        <div class="card-body bg-success-subtle text-body">
+          <p name="sunriseTime" id="sunriseTime"></p>
+          <p name="sunsetTime" id="sunsetTime"></p>
+        </div>
       </div>
-    </nav>
-  </header>
+    </div>
 
-  <h1>Mountains</h1>
+    <!-- Bootstrap JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- Bootstrap JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+    <!-- data files for mountains page -->
+    <script src="scripts/data/mountainData.js"></script>
 
-  <!-- data files for mountains page -->
-  <script src="scripts/data/mountainData.js"></script>
-
-   <!-- js for mountains page  -->
-   <script src="scripts/mountains.js"></script>
-
-</body>
+    <!-- js for mountains page  -->
+    <script src="scripts/mountains.js"></script>
+  </body>
 </html>

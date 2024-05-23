@@ -1,36 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enjoy The Outdoors - National Parks</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-<body>
 
-    <header class="mb-3">
-        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Enjoy The Outdoors</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                  <a class="nav-link" aria-current="page" href="index.html">Home</a>
-                  <a class="nav-link active" href="national_parks.html">National Parks</a>
-                  <a class="nav-link" href="mountains.html">Mountains</a>
-                </div>
-              </div>
-            </div>
-          </nav>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header class="headerNavigation fixed-top">
+      <nav
+        class="navbar navbar-expand-lg bg-success navi-box"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"
+            ><img class="img-logo" src="otherImages/logo.png" alt="logo"
+          /></a>
+          <a class="navbar-brand navHeading" href="index.html"
+            >Wilderness Locator</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse px-5 navi-link-box"
+            id="navbarNavDropdown"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="national_parks.html"
+                  >National Parks</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="mountains.html">Mountains</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <h1>National Parks</h1>
+    <h3 class="headingNationalPark text-center">
+      Search For National Parks to View Results
+    </h3>
+
+    <!-- Add Radio Button -->
+    <section>
+      <div
+        class="radiobutton d-flex justify-content-center mb-3"
+        id="radioCheck"
+      >
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="option"
+            id="byLocation"
+            value="byLocation"
+          />
+          <label class="form-check-label" for="byLocation">By Location</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="option"
+            id="byType"
+            value="byType"
+          />
+          <label class="form-check-label" for="byType">By Park Type</label>
+        </div>
+      </div>
+
+      <!-- 
+      - This is the select field for search by location 
+      - Here we have dropdown menu with each state
+    -->
+
+      <!--   <select
+        class="hidden form-select w-25"
+        name="searchByParkType"
+        aria-label="Default select example"
+        id="searchByParkType"
+      ></select> -->
+      <div class="d-flex justify-content-center">
+        <select
+          class="hidden form-select w-25 mb-4"
+          name="searchByLocation"
+          id="searchByLocation"
+        ></select>
+
+        <select
+          class="hidden form-select w-25 mb-4"
+          name="searchByParkType"
+          id="searchByParkType"
+        ></select>
+      </div>
+
+      <!-- 
+      - This is the table where we display the information to the user
+      - used bootstrap to design the table ???????
+     -->
+      <div class="container">
+        <table
+          class="table table-dark table-striped-columns"
+          id="displayTableByLocation"
+        >
+          <thead>
+            <tr id="tableHead"></tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </section>
 
     <!-- Bootstrap JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- data files for national parks page -->
     <script src="scripts/data/locationData.js"></script>
@@ -39,6 +152,5 @@
 
     <!-- js for national parks page  -->
     <script src="scripts/national_parks.js"></script>
-    
-</body>
+  </body>
 </html>

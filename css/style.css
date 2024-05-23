@@ -1,0 +1,79 @@
+/* CSS FOR HOME PAGE */
+/* this will apply to all the pages */
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@400..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.img-logo {
+  height: 50px;
+  object-fit: cover;
+}
+
+.navHeading {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 23px;
+}
+
+.navi-link-box {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 25px;
+}
+.caro-img {
+  height: 600px;
+  object-fit: cover;
+}
+
+.park-map {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mission-h3 {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 25px;
+}
+
+.footer {
+  height: 150px;
+  width: 100%;
+  background-color: #faebd7;
+}
+
+.card-container {
+  margin-bottom: 200px;
+}
+
+.radiobutton {
+  margin-top: 50px;
+}
+
+.headingNationalPark {
+  margin-top: 100px;
+  font-style: oblique;
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.mountainHeading {
+  margin-top: 100px;
+  font-style: oblique;
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
